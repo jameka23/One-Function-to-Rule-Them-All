@@ -1,5 +1,8 @@
 console.log("helllloo")
+/*
+You may notice that your code to enable individual powers (not all at once) is very similar. To keep your code DRY, make one function that will handle activating a power depending on which button is clicked. (Hint: one way to get started is to use event.target.id.split("-") in your function)
 
+*/
 
 // The learning objective of this exercise is writing event listeners to handle button clicks, and modifying the classList of DOM elements when those events are broadcast by the browser.
 
@@ -58,3 +61,7 @@ function deactivateHandler(){
 
 document.querySelector("#activate-all").addEventListener("click",activateHandler)
 document.querySelector("#deactivate-all").addEventListener("click",deactivateHandler)
+
+
+
+function(event)
