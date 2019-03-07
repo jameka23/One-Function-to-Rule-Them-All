@@ -1,19 +1,20 @@
 console.log("helllloo")
-
-
-// The learning objective of this exercise is writing event listeners to handle button clicks, and modifying the classList of DOM elements when those events are broadcast by the browser.
-
 /*
-1. Add the correct string as the first argument to addEventListener()
-2. Write a function named flightHandlerFunction that will remove the disabled class on the corresponding <section           id="flight"> (section, not button) and replace it with a class of enabled.
-3. Have your developer tools open. When you click the button, the following element...
-
+You may notice that your code to enable individual powers (not all at once) is very similar. To keep your code DRY, make one function that will handle activating a power depending on which button is clicked. (Hint: one way to get started is to use event.target.id.split("-") in your function)
 */
 function flightHandlerFunction(){
     const section = document.getElementById("flight")
     section.classList.remove("disabled")
     section.classList.add("enabled")
 }
+
+function handlerFunction(){
+    
+
+    section.classList.remove("disabled")
+    section.classList.add("enabled")   
+}
+
 
 document.querySelector("#activate-flight").addEventListener("click", flightHandlerFunction)
 
