@@ -2,40 +2,34 @@ console.log("helllloo")
 /*
 You may notice that your code to enable individual powers (not all at once) is very similar. To keep your code DRY, make one function that will handle activating a power depending on which button is clicked. (Hint: one way to get started is to use event.target.id.split("-") in your function)
 */
-function flightHandlerFunction(){
-    const section = document.getElementById("flight")
-    section.classList.remove("disabled")
-    section.classList.add("enabled")
-}
+// function flightHandlerFunction(){
+//     const section = document.getElementById("flight")
+//     section.classList.toggle("enabled")
+// }
 
-function handlerFunction(){
-    
+// function mindHandlerFunction(){
+//     const section = document.getElementById("mindreading")
+//     section.classList.toggle("enabled")
+// }
+
+// function xrayHandlerFunction(){
+//     const section = document.getElementById("xray")
+//     section.classList.remove("disabled")
+//     section.classList.add("enabled")
+// }
+
+function flightHandlerFunction(e){
+    console.log(e.target.id.split("-"))    
 
     section.classList.remove("disabled")
     section.classList.add("enabled")   
 }
 
-
-document.querySelector("#activate-flight").addEventListener("click", flightHandlerFunction)
-
-/*
-Once you have that working, write two more JavaScript functions, and two more querySelector().addEventListener() statements for handling the click event on the other two buttons. Those event handlers should perform the same step of removing disabled, and adding enabled on the corresponding <section> elements
-*/
-
-function mindHandlerFunction(){
-    const section = document.getElementById("mindreading")
-    section.classList.remove("disabled")
-    section.classList.add("enabled")
-}
-
-function xrayHandlerFunction(){
-    const section = document.getElementById("xray")
-    section.classList.remove("disabled")
-    section.classList.add("enabled")
-}
-
-document.querySelector("#activate-mindreading").addEventListener("click", mindHandlerFunction)
-document.querySelector("#activate-xray").addEventListener("click", xrayHandlerFunction)
+document.querySelectorAll("#activate").split("-").addEventListener("click", (e) => {
+    console.log(e)    
+})
+// document.querySelector("#activate-mindreading").addEventListener("click", mindHandlerFunction)
+// document.querySelector("#activate-xray").addEventListener("click", xrayHandlerFunction)
 
 /*
 Write two more event handlers for activating and deactivating all powers when the corresponding buttons are clicked. You will need to use the   document.querySelectorAll() method for these.
