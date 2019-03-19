@@ -5,30 +5,22 @@ You may notice that your code to enable individual powers (not all at once) is v
 function flightHandlerFunction(){
     const section = document.getElementById("flight")
     section.classList.toggle("enabled")
+    section.classList.toggle("disabled")
 }
 
 function mindHandlerFunction(){
     const section = document.getElementById("mindreading")
     section.classList.toggle("enabled")
+    section.classList.toggle("disabled")
 }
 
 function xrayHandlerFunction(){
     const section = document.getElementById("xray")
-    section.classList.remove("disabled")
-    section.classList.add("enabled")
+    section.classList.toggle("enabled")
+    section.classList.toggle("disabled")
 }
 
-// function flightHandlerFunction(e){
-//     console.log(e.target.id.split("-"))    
-
-//     section.classList.remove("disabled")
-//     section.classList.add("enabled")   
-// }
-
-// document.querySelectorAll("#activate").split("-").addEventListener("click", (e) => {
-//     console.log(e)    
-// })
-document.querySelector
+document.querySelector("#activate-flight").addEventListener("click", flightHandlerFunction)
 document.querySelector("#activate-mindreading").addEventListener("click", mindHandlerFunction)
 document.querySelector("#activate-xray").addEventListener("click", xrayHandlerFunction)
 
