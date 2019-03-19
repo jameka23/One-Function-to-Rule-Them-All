@@ -2,23 +2,7 @@ console.log("helllloo")
 /*
 You may notice that your code to enable individual powers (not all at once) is very similar. To keep your code DRY, make one function that will handle activating a power depending on which button is clicked. (Hint: one way to get started is to use event.target.id.split("-") in your function)
 */
-// function flightHandlerFunction(){
-//     const section = document.getElementById("flight")
-//     section.classList.toggle("enabled")
-//     section.classList.toggle("disabled")
-// }
 
-// function mindHandlerFunction(){
-//     const section = document.getElementById("mindreading")
-//     section.classList.toggle("enabled")
-//     section.classList.toggle("disabled")
-// }
-
-// function xrayHandlerFunction(){
-//     const section = document.getElementById("xray")
-//     section.classList.toggle("enabled")
-//     section.classList.toggle("disabled")
-// }
 
 function handlerFunction (section){
     section.classList.toggle("enabled")
